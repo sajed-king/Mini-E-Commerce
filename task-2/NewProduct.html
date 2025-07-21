@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+      <form class="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4" id="product-form">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+          Add New Product
+        </h2>
+
+        <!-- Product Name -->
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="product-name"
+          >
+            Product Name
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500"
+            id="product-name"
+            type="text"
+            value=""
+            placeholder="Enter product name"
+            required
+          />
+        </div>
+
+        <!-- Price -->
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="price">
+            Price
+          </label>
+          <div class="relative">
+            <span
+              class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500"
+              >$</span
+            >
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 pl-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500"
+              id="price"
+              type="number"
+              step="1"
+              min="0"
+              value=""
+              placeholder="0.00"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Image URL -->
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="image-url"
+          >
+            Image URL
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500"
+            id="image-url"
+            type="url"
+            placeholder="https://example.com/image.jpg"
+            value=""
+            required
+          />
+        </div>
+
+        <!-- Description -->
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="description"
+          >
+            Description
+          </label>
+          <textarea
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500 h-32"
+            id="description"
+            placeholder="Enter product description"
+            value=""
+            required
+          ></textarea>
+        </div>
+
+        <!-- Category -->
+        <div class="mb-6">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="category"
+          >
+            Category
+          </label>
+          <select
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500"
+            id="category"
+            value=""
+            required
+          >
+            <option value="" disabled selected>Select a category</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="home">Home & Garden</option>
+            <option value="books">Books</option>
+            <option value="sports">Sports & Outdoors</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex items-center justify-between">
+          <button
+            class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full transition duration-150 ease-in-out transform hover:scale-105 hover:bg-red-600"
+            type="submit"
+          >
+            Add Product
+          </button>
+        </div>
+      </form>
+      <span id="result"></span>
+
+      <script src="./form.js"></script>
+    </div>
+  </body>
+</html>
