@@ -25,7 +25,7 @@ async function getData() {
               <div class=" text-center">
                 <h3 class="text-[10px] text-gray-700 font-bold">${
                   product.title.length > 20
-                    ? product.title.substring(0, 30) + "..."
+                    ? product.title.substring(0, 25) + "..."
                     : product.title
                 }</h3>
                 <p
